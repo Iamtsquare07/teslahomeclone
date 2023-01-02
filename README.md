@@ -3,7 +3,7 @@
 * v1.0.0
 * By Tsquare07
 
-This a clone of the Tesla website created for learning purpose
+This is a clone of the Tesla website created for learning purposes
 
 This project is written in JavaScript with ofcourse HTML & CSS3
 
