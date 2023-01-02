@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'M PLUS 1', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    
+}
+
+@keyframes arrow-jump {
+    0%   { opacity: .9;}
+    10% {transform: translateY(5px); }
+    50% {transform: translateY(1px); }
+    100% { opacity: 1; 
+          -webkit-transform: translateY(7px);
+          -moz-transform: translateY(7px);
+          /* -0-transform: translateY(10px); */
+          transform: translateY(7px);
+      }
+    
+  }
+
+  #arrow {
+    -webkit-animation: arrow-jump 2s infinite; /* Safari 4+ */
+    -moz-animation:    arrow-jump 2s infinite; /* Fx 5+ */
+    -o-animation:      arrow-jump 2s infinite; /* Opera 12+ */
+    animation:         arrow-jump 2s infinite; /* IE 10+, Fx 29+ */
+  }
+
+
+
+header{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    font-weight: 500;
+}
+
+header a .logo{
+    height: 14px;
+    width: 130px;
+    padding-left: 15px;
+}
+
+header nav.center{
+    color: inherit;
+    text-align: center;
+}
+
+header nav a{
+    text-decoration: none;
+    padding: 5px 10px;
+    
+}
+
+header nav.right {text-align: right;}
+
+
+nav a:hover{
+    background-color: rgba(106, 106, 107, 0.185);
+    border-radius: 5px;
+    transition: .5s;
+}
+
+
+
+#menu {
+    background-color: rgba(106, 106, 107, 0.096);
+    border-radius: 5px;
+    padding: 7px 15px 7px 15px;
+}
+
+.dt{
+    display: none;
+}
+
+
+aside {
+    position: fixed;
+    right: -400px;
+    width: 295px;
+    background-color: white;
+    z-index: 999 !important;
+    padding: 85px 45px;
+    height: 100vh;
+    transition: .5s;
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+aside a{
+    display: block;
+    background-color: #fff;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 14.7px;
+    font-weight: 100;
+}
+
+aside button.close {
+    background-color: transparent;
+    font-size: 25px;
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    cursor: pointer;
+    border: 0;
+    color: rgb(20, 20, 20);
+}
+
+aside.active {
+    right: 0;
+}
+
+aside a:hover{
+    background-color: rgba(106, 106, 107, 0.185);
+    border-radius: 5px;
+    transition: .5s;
+}
+.shadow {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .35);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    display: none;
+}
+
+aside .mobile-hidden {
+    display: none;
+}
+
+.shadow.active {
+    display: block;
+}
+
+a,a:active {
+    color: black;
+}
+a:hover {
+    transition: .3s;
+    
+}
+
+.arrow {
+    font-weight: 900;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 25px;
+    z-index: 9999999;
+}
+
+
+
+.arrow-down:hover {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.section {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100vh;
+}
+
+.section .content {
+    transition: opacity .1s ease-in;
+    width: 100%;
+    height: 100vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    text-align: center;
+    display: grid;
+    grid-template-rows: min-content auto auto;
+}
+
+.section.active .content{
+    opacity: 1;
+}
+
+.section h1 {
+    font-size: 2.7rem;
+    font-weight: 500;
+}
+
+
+
+.section .buttons a {
+    display: block;
+    background-color: #eee;
+    color: inherit;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform:capitalize;
+    opacity: .9;
+    font-size: 14px;
+}
+ 
+.section .buttons {
+    row-gap: 20px;
+    display: grid;
+    height: fit-content;
+    width: 60vw;
+    text-align: center;
+    margin: auto;
+}
+
+.section .buttons a:first-child {
+    background-color: rgb(44, 44, 44);
+    color: #fff;
+}
+
+#accessories .buttons {
+    display: block;
+    width: 50vw;
+    background-color: #000000;
+    border-radius: 5px;
+    opacity: 10;
+    height: fit-content;
+    padding: 0;
+    margin-top: 44vh;
+}
+
+.active {
+    transition: .6s ease;
+}
+
+
+.buttons {
+    padding-top: 124px;
+}
+
+footer {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: -50px;
+}
+
+footer > a {
+    margin-right: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    color: inherit;
+    color: rgb(103, 103, 112);
+}
+
+ion-icon {
+    pointer-events :none;
+}
+
+@media only screen and (min-width: 1024px){
+    .section .buttons {
+        max-width: 640px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+        width: 55vw;
+        padding-top: 50vh;
+    }
+
+    .section .content{
+        opacity: 0;
+        top: 0;
+        position: fixed;
+    }
+
+    #accessories .buttons {
+        width: 20vw;
+    }
+
+    
+}
+
+
+@media only screen and (min-width: 1200px){
+    #menu {
+        background-color: rgba(79, 77, 88, 0);
+    }
+
+    #menu:hover{
+        background-color: rgba(106, 106, 107, 0.185);
+    }
+
+
+    .section .buttons {
+        max-width: 640px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+        width: 40vw;
+        
+    }
+
+    .dt{
+        display: initial;
+    }
+
+    aside .mobile {
+        display: none;
+    }
+
+    aside .mobile-hidden {
+        display: block;
+    }
+    
+}
