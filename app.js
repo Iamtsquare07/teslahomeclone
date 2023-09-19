@@ -26,9 +26,8 @@ display.addEventListener('change', stopScrollEvent)
 
 function attachScroll() {
   document.addEventListener('scroll', () => {
-    const direction = window.pageYOffset - document.lastScrollPosition > 0 ? 'down' : 'up';
+    const direction = window.scrollY - document.lastScrollPosition > 0 ? 'down' : 'up';
     const sections = [...document.querySelectorAll('.section')];
-    // console.log(sections)
     if (document.onWayTo === null) {
       const destIndex = direction === 'up' ? document.lastCentered - 1 : document.lastCentered + 1;
       if (destIndex >= 0 && destIndex < sections.length) {
@@ -39,8 +38,7 @@ function attachScroll() {
     }
   
     sections.forEach((section,index) => {
-      const accesories = document.getElementById("accessories")
-      if (window.pageYOffset === section.offsetTop) {
+      if (window.scrollY === section.offsetTop) {
         console.log(section.offsetTop)
         document.lastCentered = index;
         section.classList.add("active");
@@ -56,5 +54,3 @@ function attachScroll() {
   })
   
 }
-
-
