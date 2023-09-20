@@ -5,8 +5,8 @@
 
 This is a clone of the Tesla website created for learning purposes
 
-This project is written in JavaScript with ofcourse HTML & CSS3
+This project is written in JavaScript, HTML & CSS3
 
-Other tools used in the code is the Ionic framework, I used the Ionic framework for icons on the page.
+Icons from the Ionic framework.
 
 Project link on codepen: https://codepen.io/iamtsquare07/full/oNMxodp
